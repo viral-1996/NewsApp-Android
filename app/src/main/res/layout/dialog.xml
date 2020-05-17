@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+        <RelativeLayout
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:id="@+id/long_press_image"
+                android:scaleType="fitXY"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dialog_text"
+                android:layout_below="@id/long_press_image"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@color/colorNewscardText"
+                android:layout_margin="5dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:id="@+id/padding"
+                android:layout_below="@id/dialog_text"
+                android:background="@color/colorPrimaryDark"
+                android:layout_marginTop="5dp"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@id/padding">
+                <ImageView
+                    android:layout_width="138dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/twitter"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"/>
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_toEndOf="@id/twitter"
+                    android:textColor="@color/colorPrimaryDark"/>
+                <ImageView
+                    android:id="@+id/dialog_bookmark_icon"
+                    android:layout_width="138dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

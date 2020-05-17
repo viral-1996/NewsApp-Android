@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".bottomtabs.Trending">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/trending_fragment"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Enter Keyword:"
+        android:textSize="20dp"
+        android:textColor="@color/colorNewscardText"
+        android:id="@+id/trending_text"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/trending_input"
+        android:layout_marginHorizontal="30dp"
+        android:maxLines="1"
+        android:inputType="text"
+        android:textCursorDrawable="@drawable/trending_edittext"
+        android:hint="CoronaVirus"
+        android:theme="@style/AppTheme"
+        android:layout_below="@id/trending_text"
+        android:imeOptions="actionSend"/>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/trending_chart"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/trending_input"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
+        android:visibility="gone" />
+
+</RelativeLayout>
